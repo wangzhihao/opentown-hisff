@@ -4,7 +4,7 @@ import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
  * @customElement
  * @polymer
  */
-class Polymer3ApplicationApp extends PolymerElement {
+class HisffApp extends PolymerElement {
   static get template() {
     return html`
       <style>
@@ -19,10 +19,10 @@ class Polymer3ApplicationApp extends PolymerElement {
     return {
       prop1: {
         type: String,
-        value: 'polymer-3-application-app'
+        value: 'hisff-app'
       }
     };
   }
 }
 
-window.customElements.define('polymer-3-application-app', Polymer3ApplicationApp);
+window.customElements.define('hisff-app', HisffApp);
