@@ -1,10 +1,11 @@
 {
   "name": "opentown-hisff",
-  "description": "",
-  "homepage": "https://stackblitz.com/edit/opentown-hisff",
   "dependencies": {
-    "@polymer/polymer": "3.0.2",
-    "@webcomponents/webcomponentsjs": "2.0.0"
+    "@polymer/polymer": "^3.0.0",
+    "polymer-cli": "^1.7.2"
   },
-  "version": "1.0.0"
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-browser-legacy": "^1.0.0"
+  }
 }

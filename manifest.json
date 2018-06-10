@@ -1,0 +1,6 @@
+{
+  "name": "opentown-hisff",
+  "short_name": "opentown-hisff",
+  "start_url": "/",
+  "display": "standalone"
+}
