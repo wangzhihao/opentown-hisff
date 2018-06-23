@@ -12,10 +12,14 @@ Polymer({
   <custom-style>
     <style>
       .menu-bar {
-        @apply --paper-font-common-base;
+        --menu-padding: 5px;
+      }
+
+      .menu-bar {
+        @apply --paper-font-menu;
         color: white;
         background-color: var(--paper-grey-900);
-        padding: 5px;
+        padding: var(--menu-padding);
       }
 
       .menu-bar a.menu-item {
@@ -23,12 +27,12 @@ Polymer({
         text-decoration: none;
         color: white;
         background-color: var(--paper-grey-900);
-        padding: 0px 5px;
+        padding: 0px var(--menu-padding);
       }
 
       .menu-bar a.menu-item.right {
         float: right;
-        padding: 0 5px;
+        padding: 0 var(--menu-padding);
       }
     </style>
   </custom-style>
