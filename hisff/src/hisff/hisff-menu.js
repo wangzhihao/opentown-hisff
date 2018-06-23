@@ -57,7 +57,7 @@ Polymer({
         padding: 0 16px;
         line-height: 40px;
         text-decoration: none;
-        color: var(--app-secondary-color);
+        color: var(--paper-grey-700);
       }
 
       .drawer-list a.iron-selected {
