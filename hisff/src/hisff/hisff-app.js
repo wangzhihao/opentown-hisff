@@ -1,28 +1,13 @@
-import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
+import '@polymer/polymer/polymer-legacy.js';
 
-/**
- * @customElement
- * @polymer
- */
-class HisffApp extends PolymerElement {
-  static get template() {
-    return html`
-      <style>
-        :host {
-          display: block;
-        }
-      </style>
-      <h2>Hello [[prop1]]!</h2>
-    `;
-  }
-  static get properties() {
-    return {
-      prop1: {
-        type: String,
-        value: 'hisff-app'
-      }
-    };
-  }
-}
+import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
+import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 
-window.customElements.define('hisff-app', HisffApp);
+import './hisff-menu.js';
+
+Polymer({
+  _template: html`
+     <hisff-menu></hisff-menu>
+  `,
+  is: 'hisff-app'
+});
