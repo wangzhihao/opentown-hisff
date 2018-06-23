@@ -5,6 +5,11 @@ import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 
 import '@polymer/paper-styles/color.js';
 import '@polymer/paper-styles/typography.js';
+import '@polymer/paper-icon-button/paper-icon-button.js';
+import '@polymer/iron-media-query/iron-media-query.js';
+import '@polymer/iron-icons/iron-icons.js';
+import '@polymer/iron-selector/iron-selector.js';
+import '@polymer/app-layout/app-drawer/app-drawer.js';
 
 import 'underscore/underscore-min.js';
 
@@ -42,16 +47,56 @@ Polymer({
         float: right;
         padding: 0 var(--menu-padding);
       }
+
+      .drawer-list {
+        margin: 0 20px;
+      }
+
+      .drawer-list a {
+        display: block;
+        padding: 0 16px;
+        line-height: 40px;
+        text-decoration: none;
+        color: var(--app-secondary-color);
+      }
+
+      .drawer-list a.iron-selected {
+        color: black;
+        font-weight: bold;
+      }
     </style>
   </custom-style>
 
-  <div class="menu-bar">
-    <dom-repeat items="[[items]]">
-      <template>
-        <a href="[[item.link]]" class$="menu-item [[item.direction]] [[_should_decorate_with_separator(item)]]">[[item.name]]</a>
-      </template>
-    </dom-repeat>
-  </div>
+  <iron-media-query query="max-width: 650px" query-matches="{{smallScreen}}"></iron-media-query>
+
+  <dom-if if="[[!smallScreen]]">
+    <template>
+      <div class="menu-bar">
+        <dom-repeat items="[[items]]">
+          <template>
+            <a href="[[item.link]]" class$="menu-item [[item.direction]] [[_should_decorate_with_separator(item)]]">[[item.name]]</a>
+          </template>
+        </dom-repeat>
+      </div>
+    </template>
+  </dom-if>
+
+  <dom-if if="[[smallScreen]]">
+    <template>
+      <div class="menu-bar">
+        <paper-icon-button icon="menu" on-click="_toggleDrawer"></paper-icon-button>
+      </div>
+      <app-drawer opened="{{drawerOpened}}" swipe-open tabindex="0">
+        <iron-selector role="navigation" class="drawer-list">
+          <dom-repeat items="[[items]]">
+            <template>
+              <a href="[[item.link]]" class$="[[item.direction]]">[[item.name]]</a>
+            </template>
+          </dom-repeat>
+        </iron-selector>
+      </app-drawer>
+    </template>
+  </dom-if>
 `,
   properties: {
     items: {
@@ -102,6 +147,9 @@ Polymer({
   _should_decorate_with_separator: function(item) {
       const [lastLeftMenuItem] = _.filter(this.items, function(i){return i.direction != 'right';}).slice(-1);
       return lastLeftMenuItem.name != item.name && item.direction != 'right' ? 'separator' : '';
+  },
+  _toggleDrawer() {
+     this.drawerOpened = !this.drawerOpened;
   },
   is: 'hisff-menu'
 });
