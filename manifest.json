@@ -1,0 +1,6 @@
+{
+  "name": "hisff",
+  "short_name": "hisff",
+  "start_url": "/",
+  "display": "standalone"
+}
