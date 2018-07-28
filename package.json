@@ -1,5 +1,5 @@
 {
-  "name": "polymer-3-application",
+  "name": "hisff",
   "dependencies": {
     "@polymer/app-layout": "^3.0.0-pre.21",
     "@polymer/iron-icons": "^3.0.0-pre.21",
@@ -11,6 +11,7 @@
     "@polymer/paper-listbox": "^3.0.0-pre.21",
     "@polymer/paper-menu-button": "^3.0.0-pre.21",
     "@polymer/polymer": "^3.0.0",
+    "polymer-cli": "^1.7.7",
     "underscore": "^1.9.1"
   },
   "devDependencies": {

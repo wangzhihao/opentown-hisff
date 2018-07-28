@@ -19,13 +19,14 @@ Polymer({
   <custom-style>
     <style>
       .menu-bar {
-        --menu-padding: 7px;
+        --menu-padding: 15px;
+        --background-color: #262626;
       }
 
       .menu-bar {
         @apply --paper-font-menu;
         color: white;
-        background-color: var(--paper-grey-900);
+        background-color: var(--background-color);
         padding: var(--menu-padding);
       }
 
@@ -33,11 +34,11 @@ Polymer({
         display: inline-block;
         text-decoration: none;
         color: white;
-        background-color: var(--paper-grey-900);
+        font-weight: bold;
+        background-color: var(--background-color);
         padding: 0px var(--menu-padding);
       }
       .menu-bar a.menu-item.separator:after {
-        content: '|';
         font-size: 1.2em;
         vertical-align: middle;
         position: relative;
@@ -64,6 +65,12 @@ Polymer({
         color: black;
         font-weight: bold;
       }
+      .logo {
+          display: inline-block;
+          vertical-align: bottom;
+          width: 105px;
+          height: 28px;
+      }
     </style>
   </custom-style>
 
@@ -71,7 +78,9 @@ Polymer({
 
   <dom-if if="[[!smallScreen]]">
     <template>
+
       <div class="menu-bar">
+        <hisff-image image="./images/logo.png" class="logo"></hisff-image>
         <dom-repeat items="[[items]]">
           <template>
             <a href="[[item.link]]" class$="menu-item [[item.direction]] [[_should_decorate_with_separator(item)]]">[[item.name]]</a>
@@ -102,35 +111,27 @@ Polymer({
     items: {
       value: [
         { 
-          name: '首页',
+          name: '2018 HISFF',
           link: '#'
         },
         { 
-          name: '导航栏 1',
+          name: '公共放映计划',
           link: '#'
         },
         { 
-          name: '导航栏 2',
+          name: '评委',
           link: '#'
         },
         { 
-          name: '导航栏 3',
+          name: '资讯',
           link: '#'
         },
         { 
-          name: '导航栏 4',
+          name: '活动',
           link: '#'
         },
         { 
-          name: '导航栏 5',
-          link: '#'
-        },
-        { 
-          name: '导航栏 6',
-          link: '#'
-        },
-        { 
-          name: '导航栏 7',
+          name: '往届优秀短片',
           link: '#'
         },
         { 

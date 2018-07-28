@@ -1,15 +1,11 @@
-<!doctype html>
-<html lang="en-US">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="https://gmpg.org/xfn/11">
-<link rel="pingback" href="https://demo.hashthemes.com/square/xmlrpc.php">
+import '@polymer/polymer/polymer-legacy.js';
 
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title="Square &raquo; Feed" href="https://demo.hashthemes.com/square/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Square &raquo; Comments Feed" href="https://demo.hashthemes.com/square/comments/feed/" />
+import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
+import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+
+
+Polymer({
+  _template: html`
     <script type="text/javascript">
       window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/demo.hashthemes.com\/square\/wp-includes\/js\/wp-emoji-release.min.js?ver=75d0cb2b0af953f3e757eda95987d15f"}};
       !function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -38,7 +34,7 @@ img.emoji {
 <link rel='stylesheet' id='square-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Roboto+Condensed:300italic,400italic,700italic,400,300,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
 <link rel='stylesheet' id='bxslider-css'  href='https://demo.hashthemes.com/square/wp-content/themes/square/css/jquery.bxslider.css?ver=4.1.2' type='text/css' media='all' />
 <link rel='stylesheet' id='animate-css'  href='https://demo.hashthemes.com/square/wp-content/themes/square/css/animate.css?ver=1.0' type='text/css' media='all' />
-<link rel='stylesheet' id='font-awesome-css'  href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://demo.hashthemes.com/square/wp-content/themes/square/css/font-awesome.css?ver=4.6.3' type='text/css' media='all' />
 <link rel='stylesheet' id='owl-carousel-css'  href='https://demo.hashthemes.com/square/wp-content/themes/square/css/owl.carousel.css?ver=1.3.3' type='text/css' media='all' />
 <link rel='stylesheet' id='owl-theme-css'  href='https://demo.hashthemes.com/square/wp-content/themes/square/css/owl.theme.css?ver=1.3.3' type='text/css' media='all' />
 <link rel='stylesheet' id='square-style-css'  href='https://demo.hashthemes.com/square/wp-content/themes/square/style.css?ver=75d0cb2b0af953f3e757eda95987d15f' type='text/css' media='all' />
@@ -88,55 +84,52 @@ img.emoji {
 })('//demo.hashthemes.com/square/?wordfence_lh=1&hid=A69B9D323B417E0B1F6C8E43284E5AD6');
 </script><style>.sq-main-header{background-image: url(https://demo.hashthemes.com/square/wp-content/uploads/2016/09/new-yor.jpg)}</style> <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
   
-    <title>hisff</title>
-    <meta name="description" content="hisff description">
+<section id="sq-home-slider-section">
+  <div id="sq-bx-slider">
+      <div class="sq-slide sq-slide-count1">
+        <img src="./images/test_images/lalaland.png">
+      </div>
+      <!--
+      <div class="sq-slide sq-slide-count2">
+      <img src="https://demo.hashthemes.com/square/wp-content/uploads/2016/09/banner1.jpg">
+      
+              <div class="sq-slide-caption">
+          <div class="sq-slide-cap-title animated fadeInDown">
+            Fully Responsive Design         </div>
 
-    <!-- See https://goo.gl/OOhYW5 -->
-    <link rel="manifest" href="/manifest.json">
+          <div class="sq-slide-cap-desc animated fadeInUp">
+            Works on every device         </div>
+        </div>
+          </div>
+      <div class="sq-slide sq-slide-count3">
+      <img src="https://demo.hashthemes.com/square/wp-content/uploads/2016/09/ban-ner2.jpg">
+      
+              <div class="sq-slide-caption">
+          <div class="sq-slide-cap-title animated fadeInDown">
+            Easy to Set Up          </div>
 
-    <script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module" src="/src/hisff/hisff-app.js"></script>
-  </head>
-  <body>
-    <hisff-app></hisff-app>
-  </body>
-  <script type="text/javascript">
-    var c = document.body.className;
-    c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
-    document.body.className = c;
-  </script>
-  <script type='text/javascript'>
-/* <![CDATA[ */
-var wpcf7 = {"apiSettings":{"root":"https:\/\/demo.hashthemes.com\/square\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.3'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var wc_add_to_cart_params = {"ajax_url":"\/square\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/square\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/demo.hashthemes.com\/square\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=3.4.3'></script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'></script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var woocommerce_params = {"ajax_url":"\/square\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/square\/?wc-ajax=%%endpoint%%"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=3.4.3'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var wc_cart_fragments_params = {"ajax_url":"\/square\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/square\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_2aa6b429e41aaa6ff06695ac02805cac","fragment_name":"wc_fragments_2aa6b429e41aaa6ff06695ac02805cac"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=3.4.3'></script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-content/themes/square/js/modernizr.js?ver=2.6.3'></script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-content/themes/square/js/jquery.bxslider.js?ver=4.1.2'></script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-content/themes/square/js/owl.carousel.js?ver=1.3.3'></script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-content/themes/square/js/jquery.superfish.js?ver=20160213'></script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-content/themes/square/js/draggabilly.pkgd.min.js?ver=1.3.3'></script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-content/themes/square/js/elastiStack.js?ver=1.0.0'></script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-content/themes/square/js/square-custom.js?ver=20150903'></script>
-<script type='text/javascript' src='https://demo.hashthemes.com/square/wp-includes/js/wp-embed.min.js?ver=75d0cb2b0af953f3e757eda95987d15f'></script>
-</html>
+          <div class="sq-slide-cap-desc animated fadeInUp">
+            Set up your website in no time          </div>
+        </div>
+        </div>
+        -->
+    </div>
+  <div class="sq-banner-shadow"><img src="https://demo.hashthemes.com/square/wp-content/themes/square/images/banner-shadow.png"></div>
+</section>
+   `,
+   ready: function() {
+    var root = this.shadowRoot;
+    jQuery(function($){
+      $(root.querySelector('#sq-bx-slider')).bxSlider({
+        'pager':false,
+        'auto' : true,
+        'mode' : 'fade',
+        'pause' : 5000,
+        'prevText' : '<i class="fa fa-angle-left"></i>',
+        'nextText' : '<i class="fa fa-angle-right"></i>',
+        'adaptiveHeight' : true
+      });
+    });
+   },
+  is: 'hisff-banner-v2'
+});
